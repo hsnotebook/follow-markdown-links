@@ -1,5 +1,5 @@
 import re
-from urlparse import urlparse
+from urllib.parse import urlparse
 from vim import *
 
 DEFAULT_EXTENSION = 'md'
@@ -63,6 +63,7 @@ def follow_link():
 
     # Open if exists
     if os.path.exists(link):
+        command("w")
         return command('e %s' % link)
 
     # Directory path does not exist. Ask user to create it.
@@ -75,4 +76,5 @@ def follow_link():
         os.makedirs(dirpath)
 
     # Open as new file
+    command("w")
     return command('e %s' % link)

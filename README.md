@@ -2,6 +2,8 @@
 
 This vim plugin enables browsing through your markdown files by using links between them (like a personal wiki). You just have to move the cursor to a link and press ENTER.
 
+This plugin works with +python3.
+
 Example of links
 
 - `[Notes](Notes.md)` or `[Notes]()` or `[Notes](Notes)` will open Notes.md
